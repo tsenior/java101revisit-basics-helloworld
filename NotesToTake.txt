@@ -2,3 +2,7 @@ After coding i followed the below steps:
 1. open terminal and hit command cd to my project(cd src/com/tinyiko)
 2. hit command ls(ls) and on the results there is Main.java listed
 3. hit command javac to read the byte code and transform in into java code(javac Main.java) it then created Main.java file
+    3.1 byte code is what the JVM understands
+4. hit command cd and went three folders back to my main project folder JAVA101 (cd ../../../)
+5. hit command cd and navigate to src folder(cd src)
+6. hit command java to run program(java src.com.tinyiko.Main) the main invoked is the Main.class
