@@ -1,0 +1,4 @@
+After coding i followed the below steps:
+1. open terminal and hit command cd to my project(cd src/com/tinyiko)
+2. hit command ls(ls) and on the results there is Main.java listed
+3. hit command javac to read the byte code and transform in into java code(javac Main.java) it then created Main.java file
