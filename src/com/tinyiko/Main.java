@@ -23,5 +23,38 @@ public class Main {
         System.out.println("doubleVariable " + doubleVariable);
         System.out.println("booleanVariable " + booleanVariable);
         System.out.println("cahrVariable " + cahrVariable);
+
+
+        //Object referance variable example
+
+        int a = 10;
+        int b = a;
+
+        a = 100; // b's value won't be changed because both a and b resides in their own memory address
+
+        Person johnsName = new Person("John");
+        Person amandasName = johnsName;
+
+        System.out.println("before changing John's name");
+        System.out.println("John's name is " + johnsName.name + " and Amanda's name is "+ amandasName.name);
+
+        //johnsName.name = "Johnny";
+
+        amandasName.name = "Amandie";
+
+        System.out.println("after changing John's or Amanda's name");
+        System.out.println("John's name is " + johnsName.name + " and Amanda's name is "+ amandasName.name);
+
+
+    }
+
+    static class Person{
+
+        //referace type or Objects
+        String name;
+
+        Person(String name){
+            this.name = name;
+        }
     }
 }
