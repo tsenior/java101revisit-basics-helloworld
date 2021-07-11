@@ -9,7 +9,7 @@ public class Main {
         //check if someone is an adult or nor
         //An adult is anyone over the age of 18
 
-        int age = 15;
+        int age = 19;
 
         if (age >= 18){
             System.out.println("you are old enough");
@@ -18,5 +18,13 @@ public class Main {
         }else {
             System.out.println("go home kid");
         }
+
+
+        //Ternary operator
+
+        String message = age >= 18 ? "you are old enough" :
+                "go home kid";
+
+        System.out.println("message is: "+ message);
     }
 }
