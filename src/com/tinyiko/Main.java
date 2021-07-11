@@ -10,11 +10,13 @@ public class Main {
 
         System.out.println("Numbers");
         int [] numbers = {10, 2, 100};
+        System.out.println("we have "+ numbers.length + " items in the array");
         System.out.println(Arrays.toString(numbers));
 
         System.out.println("String Array");
 
         String [] stringsArray = {"abc", "def", "ghi", "jkl"};
+        System.out.println("we have "+ stringsArray.length + " items in the array");
         System.out.println(Arrays.toString(stringsArray));
     }
 }
