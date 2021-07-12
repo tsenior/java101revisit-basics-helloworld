@@ -1,12 +1,14 @@
 package com.tinyiko;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
         System.out.println("Hello world this is my first java 101 program");
         // Loops
 
-        int[] numbers = {1, 2, 3, 4, 5, 6 , 10, 20, 30};
+        int[] numbers = {40, 1, 2, 3, 4, 5, 6 , 10, 20, 30};
         String[] names = {"tinyiko","senior","chauke"};
 
         System.out.println("NUMBERS FOR I ARRAY");
@@ -39,5 +41,13 @@ public class Main {
         for (String name : names){
             System.out.println(name);
         }
+
+        //looping by streaming
+        System.out.println("LOOPING USING STREAM");
+
+        Arrays.stream(names).forEach(System.out::println);
+        Arrays.stream(numbers).forEachOrdered(System.out::println);
+
+
     }
 }
