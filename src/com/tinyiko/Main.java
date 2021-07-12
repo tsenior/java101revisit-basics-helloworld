@@ -10,6 +10,8 @@ public class Main {
 
         System.out.println("Numbers");
         int [] numbers = {10, 2, 100};
+        int lastValue = numbers[numbers.length-1];
+        System.out.println("laast value "+ lastValue);
         System.out.println("we have "+ numbers.length + " items in the array");
         System.out.println(Arrays.toString(numbers));
 
