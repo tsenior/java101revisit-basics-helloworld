@@ -1,4 +1,4 @@
-package com.tinyiko.config;
+package com.tinyiko.utilities;
 
 public class MethodsOverloadsHelper {
 

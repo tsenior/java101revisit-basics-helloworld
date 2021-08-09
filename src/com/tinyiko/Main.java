@@ -1,10 +1,9 @@
 package com.tinyiko;
 
-import com.tinyiko.config.CalcHelper;
-import com.tinyiko.config.GetInputHelper;
-import com.tinyiko.config.MethodsOverloadsHelper;
+import com.tinyiko.utilities.CalcHelper;
+import com.tinyiko.utilities.GetInputHelper;
+import com.tinyiko.utilities.MethodsOverloadsHelper;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.logging.Logger;
 

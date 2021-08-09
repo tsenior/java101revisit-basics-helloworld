@@ -1,4 +1,4 @@
-package com.tinyiko.config;
+package com.tinyiko.utilities;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
