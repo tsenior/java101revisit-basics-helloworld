@@ -5,9 +5,14 @@ import java.util.Scanner;
 import java.util.logging.Logger;
 
 public class GetInputHelper {
+    private GetInputHelper() {
+    }
+
     public static double getInput(Scanner sc, String prompt) {
         Logger logger = Logger.getLogger("");
         double dvalue = 0;
+
+
         try {
             System.out.println(prompt);
             dvalue = sc.nextDouble();

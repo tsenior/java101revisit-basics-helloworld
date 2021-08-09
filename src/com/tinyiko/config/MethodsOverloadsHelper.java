@@ -2,6 +2,9 @@ package com.tinyiko.config;
 
 public class MethodsOverloadsHelper {
 
+    private MethodsOverloadsHelper() {
+    }
+
     public static double getAddedPlusSumValues(double d1, double d2, double d3) {
         return (d1 + d2) + d3;
     }
