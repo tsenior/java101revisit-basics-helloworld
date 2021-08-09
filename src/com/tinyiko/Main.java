@@ -8,11 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        var item = new ClothingItem("Shirt", "M", 19.99, 3);
-//        item.setType("Shirt");
-//        item.setSize("M");
-//        item.setPrice(19.99);
-//        item.setQuantity(3);
+        var item = new ClothingItem(ClothingItem.SHIRT, "M", 19.99, 3);
 
         var totalCost = item.getPrice() * item.getQuantity();
         var formatter = NumberFormat.getCurrencyInstance();
