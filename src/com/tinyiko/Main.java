@@ -13,10 +13,20 @@ public class Main {
 
 
 
+        int[] originalValues = {10, 20, 30};
+        System.out.println("original value before :"+originalValues[0]);
+        incrementValues(originalValues);
+        System.out.println("original value after:"+originalValues[0]);
     }
     public static void incrementValue(int value){
         value += 1;
         System.out.println("value after incremented by 1 :"+value );
+
+    }
+
+    public static void incrementValues(int[] values){
+        values[0] += 1;
+        System.out.println("value after incremented by 1 :"+values[0] );
 
     }
 }
