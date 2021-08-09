@@ -1,5 +1,6 @@
 package com.tinyiko;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -12,14 +13,38 @@ public class Main {
         double d1 = getInput(sc, "Enter value 1: ");
         double d2 = getInput(sc, "Enter value 2: ");
 
-        System.out.println(d1 + " divided by "+ d2 +" equals :"+(d1 / d2));
+        System.out.println("select operation (+ - * /)");
+        var operation = sc.nextLine();
+        double result;
+
+        switch (operation){
+            case "+":
+                result = d1 + d2;
+                break;
+
+            case "-":
+                result = d1 - d2;
+                break;
+
+            case "*":
+                result = d1 * d2;
+                break;
+
+            case "/":
+                result = d1 / d2;
+                break;
+
+            default:
+                System.out.println("you did not choose a correct operation");
+                return;
+        }
+        System.out.println("The answer is "+ result);
 
 
         var sum = getAddedValues(d1, d2);
-        System.out.println("sum is :"+sum);
 
         var addedPlusSumValues  = getAddedPlusSumValues(d1,d2,sum);
-        System.out.println("sum value added with first two values :"+addedPlusSumValues);
+        System.out.println("sum value added with first two values * 2 :"+addedPlusSumValues);
 
         var multipleValues = getAddedPlusSumValues(d1, d2,d1, d2,d1, d2);
         System.out.println("multipleValues" + multipleValues);
@@ -44,7 +69,15 @@ public class Main {
     }
 
     private static double getInput(Scanner sc, String prompt) {
-        System.out.println(prompt);
-        return sc.nextDouble();
+        double dvalue = 0;
+        try {
+            System.out.println(prompt);
+            dvalue = sc.nextDouble();
+            sc.nextLine();
+        } catch (InputMismatchException e) {
+            System.out.println("could not format the number correctly");
+        }
+
+        return dvalue;
     }
 }
