@@ -6,38 +6,32 @@ import com.tinyiko.model.Hat;
 import com.tinyiko.model.Shirt;
 
 import java.text.NumberFormat;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Main {
 
     public static void main(String[] args) {
+        Map<String, ClothingItem> items = new HashMap<>();
+        items.put("Shirt", new Shirt(
+                ClothingSize.M,
+                19.99,
+                3));
+        items.put("Hat", new Hat(
+                ClothingSize.M,
+                20.00,
+                1));
 
+        System.out.println("getting single item in a Map<String, ClothingItem>");
+        var anItem = items.get("Shirt");
+        displayItemDetails(anItem);
 
-        List<String> colors = new ArrayList<>();
-        colors.add("Red");
-        colors.add("Blue");
-        colors.add("Green");
-
-        for (int i = 0; i < colors.size(); i++) {
-            System.out.println(colors.get(i));
-        }
-
-        List<ClothingItem> items = new ArrayList<>();
-        items.add(
-                new Shirt(
-                    ClothingSize.M,
-                    19.99,
-                    3));
-        items.add(
-                new Hat(
-                        ClothingSize.M,
-                        20.00,
-                        1));
-
-      for (ClothingItem item : items){
-          displayItemDetails(item);
-      }
+        System.out.println("getting multiple items in a Map<String, ClothingItem>");
+        var keys = items.keySet();
+          for (String key : keys){
+              var item = items.get(key);
+              displayItemDetails(item);
+          }
 
 
     }
