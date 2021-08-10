@@ -11,19 +11,33 @@ public class Main {
 
     public static void main(String[] args) {
 
-        var shirtItem = new Shirt(
+        String[] colors = new String[3];
+        colors[0] = "Red";
+        colors[1] = "Blue";
+        colors[2] = "Green";
+
+
+        for (int i = 0; i < colors.length; i++) {
+            System.out.println(colors[i]);
+        }
+
+        ClothingItem[] items = {
+                new Shirt(
                 ClothingSize.M,
                 19.99,
-                3);
+                3),
 
-        displayItemDetails(shirtItem);
-
-        var hatItem = new Hat(
+                new Hat(
                 ClothingSize.M,
                 20.00,
-                1);
+                1)
+        };
 
-        displayItemDetails(hatItem);
+      for (ClothingItem item : items){
+          displayItemDetails(item);
+      }
+
+
     }
 
     private static void displayItemDetails(ClothingItem item) {
